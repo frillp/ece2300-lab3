@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/simulation/modelsim
+vhex_to_seven_seg
+Z1 !s110 1520822581
+!i10b 1
+!s100 lmbeBMe^3FN8Ah=cfj3gV0
+IoK8jScZNUbcCe5N4La9b51
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+Z3 w1519241750
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/hex_to_seven_seg.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/hex_to_seven_seg.v
+L0 1
+Z4 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1520822581.276000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/hex_to_seven_seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/hex_to_seven_seg.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3
+vlab3
+R1
+!i10b 1
+!s100 d?3:E]fEe_9>1oFGS3W7B0
+INFPKaaOnTU<o41@JL3QDo3
+R2
+R0
+w1520822471
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1520822581.453000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3.v|
+!i113 1
+R5
+R6
+vlab3_test
+Z7 !s110 1520822582
+!i10b 1
+!s100 2cn8J2CZUAf:gF:big6Sl0
+I]CC@]mko@5n1A3MJYl9e_0
+R2
+R0
+R3
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_test.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_test.v
+L0 14
+R4
+r1
+!s85 0
+31
+!s108 1520822582.381000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_test.v|
+!i113 1
+R5
+R6
+vlab3_top
+R7
+!i10b 1
+!s100 f>0d5N@5A@b7^J6Ll];OX1
+I;OAccV0`25WOL1zh@Z6n:2
+R2
+R0
+w1520304352
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_top.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_top.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1520822581.973000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/lab3_top.v|
+!i113 1
+R5
+R6
+vpclock
+R1
+!i10b 1
+!s100 ?=cOXl9;e9]66EjzI9[BU0
+IZiddeF;EUYh^oiUGY:LnT3
+R2
+R0
+R3
+Z8 8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/var_clk.v
+Z9 FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/var_clk.v
+L0 52
+R4
+r1
+!s85 0
+31
+Z10 !s108 1520822581.754000
+Z11 !s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/var_clk.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/var_clk.v|
+!i113 1
+R5
+R6
+vtcounter
+R7
+!i10b 1
+!s100 oe[>g2FfgZf=PM[cJAE[>3
+I5bh4=bl:fOaX=WObzknRD3
+R2
+R0
+w1520310814
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tcounter.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tcounter.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1520822582.178000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tcounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tcounter.v|
+!i113 1
+R5
+R6
+vtffp
+R1
+!i10b 1
+!s100 e4a[_@a0clI]Wj:k3F`z50
+ILVFUAElGkCbBg4FKd=lS21
+R2
+R0
+w1519599240
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tffp.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tffp.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1520822581.092000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tffp.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tffp.v|
+!i113 1
+R5
+R6
+vtreg4bit
+!s110 1520822580
+!i10b 1
+!s100 j4N<Se4]=idZ]YASLlO3O3
+IEMWCP4GBL^5E>4iRaQiZ70
+R2
+R0
+w1519613589
+8C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/treg4bit.v
+FC:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/treg4bit.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1520822580.895000
+!s107 C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/treg4bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3|C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/treg4bit.v|
+!i113 1
+R5
+R6
+vvar_clk
+R1
+!i10b 1
+!s100 I74T7433gZW:e1zM[;`U`3
+I7]RzQN29kdQTKF6;Kim=c3
+R2
+R0
+R3
+R8
+R9
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 1
+R5
+R6

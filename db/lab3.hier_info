@@ -1,0 +1,601 @@
+|lab3_top
+CLK50 => CLK50.IN1
+SW[0] => SW[0].IN1
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+RESET_N => _.IN1
+LEDR[0] << <GND>
+LEDR[1] << <GND>
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+HEX5[0] << <VCC>
+HEX5[1] << <VCC>
+HEX5[2] << <VCC>
+HEX5[3] << <VCC>
+HEX5[4] << <VCC>
+HEX5[5] << <VCC>
+HEX5[6] << <VCC>
+HEX4[0] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX4[1] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX4[2] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX4[3] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX4[4] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX4[5] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX4[6] << hex_to_seven_seg:minDisplay.SSEG_L
+HEX3[0] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX3[1] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX3[2] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX3[3] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX3[4] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX3[5] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX3[6] << hex_to_seven_seg:tensecDisplay.SSEG_L
+HEX2[0] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX2[1] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX2[2] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX2[3] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX2[4] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX2[5] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX2[6] << hex_to_seven_seg:secDisplay.SSEG_L
+HEX1[0] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX1[1] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX1[2] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX1[3] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX1[4] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX1[5] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX1[6] << hex_to_seven_seg:decisecDisplay.SSEG_L
+HEX0[0] << hex_to_seven_seg:centisecDisplay.SSEG_L
+HEX0[1] << hex_to_seven_seg:centisecDisplay.SSEG_L
+HEX0[2] << hex_to_seven_seg:centisecDisplay.SSEG_L
+HEX0[3] << hex_to_seven_seg:centisecDisplay.SSEG_L
+HEX0[4] << hex_to_seven_seg:centisecDisplay.SSEG_L
+HEX0[5] << hex_to_seven_seg:centisecDisplay.SSEG_L
+HEX0[6] << hex_to_seven_seg:centisecDisplay.SSEG_L
+
+
+|lab3_top|lab3:theLab
+CLK => CLK.IN5
+RESET => centisecreset.IN1
+RESET => decisecreset.IN1
+RESET => secreset.IN1
+RESET => tensecreset.IN1
+RESET => minreset.IN1
+ENABLE => ENABLE.IN5
+TIME[0] <= tcounter:centicounter.Q
+TIME[1] <= tcounter:centicounter.Q
+TIME[2] <= tcounter:centicounter.Q
+TIME[3] <= tcounter:centicounter.Q
+TIME[4] <= tcounter:decicounter.Q
+TIME[5] <= tcounter:decicounter.Q
+TIME[6] <= tcounter:decicounter.Q
+TIME[7] <= tcounter:decicounter.Q
+TIME[8] <= tcounter:seccounter.Q
+TIME[9] <= tcounter:seccounter.Q
+TIME[10] <= tcounter:seccounter.Q
+TIME[11] <= tcounter:seccounter.Q
+TIME[12] <= tcounter:tencounter.Q
+TIME[13] <= tcounter:tencounter.Q
+TIME[14] <= tcounter:tencounter.Q
+TIME[15] <= tcounter:tencounter.Q
+TIME[16] <= tcounter:mincounter.Q
+TIME[17] <= tcounter:mincounter.Q
+TIME[18] <= tcounter:mincounter.Q
+TIME[19] <= tcounter:mincounter.Q
+MIN[0] <= tcounter:mincounter.Q
+MIN[1] <= tcounter:mincounter.Q
+MIN[2] <= tcounter:mincounter.Q
+MIN[3] <= tcounter:mincounter.Q
+TENSEC[0] <= tcounter:tencounter.Q
+TENSEC[1] <= tcounter:tencounter.Q
+TENSEC[2] <= tcounter:tencounter.Q
+TENSEC[3] <= tcounter:tencounter.Q
+SEC[0] <= tcounter:seccounter.Q
+SEC[1] <= tcounter:seccounter.Q
+SEC[2] <= tcounter:seccounter.Q
+SEC[3] <= tcounter:seccounter.Q
+DECISEC[0] <= tcounter:decicounter.Q
+DECISEC[1] <= tcounter:decicounter.Q
+DECISEC[2] <= tcounter:decicounter.Q
+DECISEC[3] <= tcounter:decicounter.Q
+CENTISEC[0] <= tcounter:centicounter.Q
+CENTISEC[1] <= tcounter:centicounter.Q
+CENTISEC[2] <= tcounter:centicounter.Q
+CENTISEC[3] <= tcounter:centicounter.Q
+
+
+|lab3_top|lab3:theLab|tcounter:centicounter
+CLK => CLK.IN1
+CLR => _.IN1
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+Q[0] <= treg4bit:register.OUT
+Q[1] <= treg4bit:register.OUT
+Q[2] <= treg4bit:register.OUT
+Q[3] <= treg4bit:register.OUT
+
+
+|lab3_top|lab3:theLab|tcounter:centicounter|treg4bit:register
+CLK => CLK.IN4
+RESET => RESET.IN4
+IN[0] => IN[0].IN1
+IN[1] => IN[1].IN1
+IN[2] => IN[2].IN1
+IN[3] => IN[3].IN1
+OUT[0] <= tffp:tffp0.Q
+OUT[1] <= tffp:tffp1.Q
+OUT[2] <= tffp:tffp2.Q
+OUT[3] <= tffp:tffp3.Q
+
+
+|lab3_top|lab3:theLab|tcounter:centicounter|treg4bit:register|tffp:tffp0
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:centicounter|treg4bit:register|tffp:tffp1
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:centicounter|treg4bit:register|tffp:tffp2
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:centicounter|treg4bit:register|tffp:tffp3
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:decicounter
+CLK => CLK.IN1
+CLR => _.IN1
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+Q[0] <= treg4bit:register.OUT
+Q[1] <= treg4bit:register.OUT
+Q[2] <= treg4bit:register.OUT
+Q[3] <= treg4bit:register.OUT
+
+
+|lab3_top|lab3:theLab|tcounter:decicounter|treg4bit:register
+CLK => CLK.IN4
+RESET => RESET.IN4
+IN[0] => IN[0].IN1
+IN[1] => IN[1].IN1
+IN[2] => IN[2].IN1
+IN[3] => IN[3].IN1
+OUT[0] <= tffp:tffp0.Q
+OUT[1] <= tffp:tffp1.Q
+OUT[2] <= tffp:tffp2.Q
+OUT[3] <= tffp:tffp3.Q
+
+
+|lab3_top|lab3:theLab|tcounter:decicounter|treg4bit:register|tffp:tffp0
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:decicounter|treg4bit:register|tffp:tffp1
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:decicounter|treg4bit:register|tffp:tffp2
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:decicounter|treg4bit:register|tffp:tffp3
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:seccounter
+CLK => CLK.IN1
+CLR => _.IN1
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+Q[0] <= treg4bit:register.OUT
+Q[1] <= treg4bit:register.OUT
+Q[2] <= treg4bit:register.OUT
+Q[3] <= treg4bit:register.OUT
+
+
+|lab3_top|lab3:theLab|tcounter:seccounter|treg4bit:register
+CLK => CLK.IN4
+RESET => RESET.IN4
+IN[0] => IN[0].IN1
+IN[1] => IN[1].IN1
+IN[2] => IN[2].IN1
+IN[3] => IN[3].IN1
+OUT[0] <= tffp:tffp0.Q
+OUT[1] <= tffp:tffp1.Q
+OUT[2] <= tffp:tffp2.Q
+OUT[3] <= tffp:tffp3.Q
+
+
+|lab3_top|lab3:theLab|tcounter:seccounter|treg4bit:register|tffp:tffp0
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:seccounter|treg4bit:register|tffp:tffp1
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:seccounter|treg4bit:register|tffp:tffp2
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:seccounter|treg4bit:register|tffp:tffp3
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:tencounter
+CLK => CLK.IN1
+CLR => _.IN1
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+Q[0] <= treg4bit:register.OUT
+Q[1] <= treg4bit:register.OUT
+Q[2] <= treg4bit:register.OUT
+Q[3] <= treg4bit:register.OUT
+
+
+|lab3_top|lab3:theLab|tcounter:tencounter|treg4bit:register
+CLK => CLK.IN4
+RESET => RESET.IN4
+IN[0] => IN[0].IN1
+IN[1] => IN[1].IN1
+IN[2] => IN[2].IN1
+IN[3] => IN[3].IN1
+OUT[0] <= tffp:tffp0.Q
+OUT[1] <= tffp:tffp1.Q
+OUT[2] <= tffp:tffp2.Q
+OUT[3] <= tffp:tffp3.Q
+
+
+|lab3_top|lab3:theLab|tcounter:tencounter|treg4bit:register|tffp:tffp0
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:tencounter|treg4bit:register|tffp:tffp1
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:tencounter|treg4bit:register|tffp:tffp2
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:tencounter|treg4bit:register|tffp:tffp3
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:mincounter
+CLK => CLK.IN1
+CLR => _.IN1
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENP => holder.IN0
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+ENT => holder.IN1
+Q[0] <= treg4bit:register.OUT
+Q[1] <= treg4bit:register.OUT
+Q[2] <= treg4bit:register.OUT
+Q[3] <= treg4bit:register.OUT
+
+
+|lab3_top|lab3:theLab|tcounter:mincounter|treg4bit:register
+CLK => CLK.IN4
+RESET => RESET.IN4
+IN[0] => IN[0].IN1
+IN[1] => IN[1].IN1
+IN[2] => IN[2].IN1
+IN[3] => IN[3].IN1
+OUT[0] <= tffp:tffp0.Q
+OUT[1] <= tffp:tffp1.Q
+OUT[2] <= tffp:tffp2.Q
+OUT[3] <= tffp:tffp3.Q
+
+
+|lab3_top|lab3:theLab|tcounter:mincounter|treg4bit:register|tffp:tffp0
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:mincounter|treg4bit:register|tffp:tffp1
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:mincounter|treg4bit:register|tffp:tffp2
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|lab3:theLab|tcounter:mincounter|treg4bit:register|tffp:tffp3
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator
+clock_sel[0] => Mux0.IN2
+clock_sel[1] => Mux0.IN1
+clock_sel[2] => Mux0.IN0
+clock_50MHz => clock_50MHz.IN8
+var_clock <= var_clock~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_10MHz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_1MHz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_100kHz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_10kHz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_1kHz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_100Hz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_10Hz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|var_clk:clockGenerator|pclock:counter_1Hz
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+EN => always1.IN1
+EN => count[1].ENA
+EN => count[0].ENA
+EN => count[2].ENA
+EN => count[3].ENA
+clk_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+rco_out <= always1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|hex_to_seven_seg:minDisplay
+B[0] => u1.DATAIN
+B[1] => u2.DATAIN
+B[2] => u3.DATAIN
+B[3] => u4.DATAIN
+SSEG_L[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|hex_to_seven_seg:tensecDisplay
+B[0] => u1.DATAIN
+B[1] => u2.DATAIN
+B[2] => u3.DATAIN
+B[3] => u4.DATAIN
+SSEG_L[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|hex_to_seven_seg:secDisplay
+B[0] => u1.DATAIN
+B[1] => u2.DATAIN
+B[2] => u3.DATAIN
+B[3] => u4.DATAIN
+SSEG_L[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|hex_to_seven_seg:decisecDisplay
+B[0] => u1.DATAIN
+B[1] => u2.DATAIN
+B[2] => u3.DATAIN
+B[3] => u4.DATAIN
+SSEG_L[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3_top|hex_to_seven_seg:centisecDisplay
+B[0] => u1.DATAIN
+B[1] => u2.DATAIN
+B[2] => u3.DATAIN
+B[3] => u4.DATAIN
+SSEG_L[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+SSEG_L[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

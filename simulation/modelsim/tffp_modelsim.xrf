@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, lab3.sdc
+source_file = 1, C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tffp_test.v
+source_file = 1, C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/tffp.v
+source_file = 1, C:/Users/frill/Documents/misc_sem2/ece2300_labs/lab3/lab3/db/tffp.cbx.xml
+design_name = tffp
+instance = comp, \Q~output , Q~output, tffp, 1
+instance = comp, \CLK~input , CLK~input, tffp, 1
+instance = comp, \T~input , T~input, tffp, 1
+instance = comp, \RESET~input , RESET~input, tffp, 1
+instance = comp, \Q~0 , Q~0, tffp, 1
+instance = comp, \Q~reg0feeder , Q~reg0feeder, tffp, 1
+instance = comp, \Q~reg0 , Q~reg0, tffp, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, tffp, 1

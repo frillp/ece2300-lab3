@@ -1,0 +1,41 @@
+|treg4bit
+CLK => CLK.IN4
+RESET => RESET.IN4
+IN[0] => IN[0].IN1
+IN[1] => IN[1].IN1
+IN[2] => IN[2].IN1
+IN[3] => IN[3].IN1
+OUT[0] << tffp:tffp0.Q
+OUT[1] << tffp:tffp1.Q
+OUT[2] << tffp:tffp2.Q
+OUT[3] << tffp:tffp3.Q
+
+
+|treg4bit|tffp:tffp0
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|treg4bit|tffp:tffp1
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|treg4bit|tffp:tffp2
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|treg4bit|tffp:tffp3
+RESET => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+T => Q.OUTPUTSELECT
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
